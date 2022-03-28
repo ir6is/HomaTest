@@ -31,6 +31,8 @@ public class PlayerMover : MonoBehaviour
             while (!Input.GetMouseButtonDown(0))
             {
                 yield return null;
+               _view2Rotate.localRotation = Quaternion.RotateTowards(_view2Rotate.localRotation, Quaternion.identity, _rotationSpeed * Time.deltaTime);
+
             }
 
             _lastInput = _currentInput;
